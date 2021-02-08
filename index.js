@@ -6,8 +6,23 @@ const jest = require('jest');
 const managerQuestions = [
     {
         type: 'input',
-        message: '',
-        name: ''
+        message: "What is the manager's name?",
+        name: 'managerName'
+    },
+    {
+        type: 'input',
+        message: "What is the manager's ID?",
+        name: 'managerId'
+    },
+    {
+        type: 'input',
+        message: "What is the manager's email?",
+        name: 'managerEmail'
+    },
+    {
+        type: 'input',
+        message: "What is the manager's office number?",
+        name: 'managerOffice'
     }
 ]
 
@@ -15,16 +30,46 @@ const managerQuestions = [
 const engineerQuestions = [
     {
         type: 'input',
-        message: '',
-        name: ''
+        message: "What is the engineer's name?",
+        name: 'engineerName'
+    },
+    {
+        type: 'input',
+        message: "What is the engineer's ID?",
+        name: 'engineerId'
+    },
+    {
+        type: 'input',
+        message: "What is the engineer's email?",
+        name: 'engineerEmail'
+    },
+    {
+        type: 'input',
+        message: "What is the engineer's github?",
+        name: 'engineerGit'
     }
 ]
 
-//list of questions for inters
+//list of questions for interns
 const internQuestions = [
     {
         type: 'input',
-        message: '',
-        name: ''
+        message: "What is the intern's name?",
+        name: 'internName'
+    },
+    {
+        type: 'input',
+        message: "What is the intern's ID?",
+        name: 'internId'
+    },
+    {
+        type: 'input',
+        message: "What is the intern's email?",
+        name: 'internEmail'
+    },
+    {
+        type: 'input',
+        message: "What is the intern's school?",
+        name: 'internSchool'
     }
 ]
