@@ -1,9 +1,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const jest = require('jest');
+let endBuild = false;
 
 //list of questions for team manager
-const managerQuestions = [
+const manQs = [
     {
         type: 'input',
         message: "What is the manager's name?",
@@ -27,7 +28,7 @@ const managerQuestions = [
 ]
 
 //list of questions for team engineers
-const engineerQuestions = [
+const engQs = [
     {
         type: 'input',
         message: "What is the engineer's name?",
@@ -51,7 +52,7 @@ const engineerQuestions = [
 ]
 
 //list of questions for interns
-const internQuestions = [
+const intQs = [
     {
         type: 'input',
         message: "What is the intern's name?",
@@ -73,3 +74,15 @@ const internQuestions = [
         name: 'internSchool'
     }
 ]
+
+//menu question
+const menuQ = {
+    type: 'list',
+    message: 'Would you like to add another member?',
+    name: 'menu',
+    choice: [
+        'Add an engineer',
+        'Add an intern',
+        'Finish team building'
+    ]
+}
