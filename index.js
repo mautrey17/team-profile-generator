@@ -92,13 +92,30 @@ const menuQ = {
     ]
 }
 
+//function to check to create another employee
+const runMenu = () => {
+    inquirer.prompt(menuQ).then((response)=> {
+        switch (response) {
+            case 'Finish team building':
+                generateHTML();
+                break;
+            default:
+                createEmployee();
+                break;
+        }
+    })
+}
+
+//initial function to create team manager
 const createManager = () => {
     inquirer.prompt(manQs).then((response) => {
         console.log(response);
         const newManager = new Manager(response.managerName, response.managerId, response.managerEmail, response.managerOffice);
         employeeList.push(newManager);
-        console.log(employeeList)
+        runMenu();
     });
 }
+
+
 
 createManager();
