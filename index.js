@@ -9,8 +9,6 @@ const Intern = require('./lib/intern');
 //list of employees
 const employeeList = [];
 
-let endBuild = false;
-
 //list of questions for team manager
 const manQs = [
     {
@@ -95,15 +93,30 @@ const menuQ = {
     ]
 }
 
-//function to check to create another employee
+
+//function to create another employee
 const runMenu = () => {
-    inquirer.prompt(menuQ).then((response)=> {
-        switch (response) {
-            case 'Finish team building':
-                generateHTML();
+    inquirer.prompt(menuQ).then((response) => {
+        switch (response.menu) {
+            case 'Add an engineer':
+                inquirer.prompt(engQs).then((response)=> {
+                    const newEng = new Engineer(response.engineerName, response.engineerId, response.engineerEmail, response.engineerGit);
+                    employeeList.push(newEng);
+                    console.log(employeeList)
+                    runMenu();
+                })
+                break;
+            case 'Add an intern':
+                inquirer.prompt(intQs).then((response)=> {
+                    const newInt = new Intern(response.internName, response.internId, response.internEmail, response.internSchool);
+                    employeeList.push(newInt);
+                    console.log(employeeList)
+                    runMenu();
+                })
                 break;
             default:
-                createEmployee();
+                // generateHTML();
+                console.log('all done!')
                 break;
         }
     })
