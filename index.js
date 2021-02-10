@@ -1,6 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const jest = require('jest');
+const Manager = require('./lib/manager');
 
 //list of employees
 const employeeList = [];
@@ -84,9 +85,20 @@ const menuQ = {
     type: 'list',
     message: 'Would you like to add another member?',
     name: 'menu',
-    choice: [
+    choices: [
         'Add an engineer',
         'Add an intern',
         'Finish team building'
     ]
 }
+
+const createManager = () => {
+    inquirer.prompt(manQs).then((response) => {
+        console.log(response);
+        const newManager = new Manager(response.managerName, response.managerId, response.managerEmail, response.managerOffice);
+        employeeList.push(newManager);
+        console.log(employeeList)
+    });
+}
+
+createManager();
