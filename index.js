@@ -1,6 +1,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const jest = require('jest');
+
+//list of employees
+const employeeList = [];
+
 let endBuild = false;
 
 //list of questions for team manager
