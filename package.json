@@ -4,7 +4,7 @@
   "description": "A CLI application built using JavaScript and node.js to create an HTML page for a professional team.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose test/*"
   },
   "repository": {
     "type": "git",
