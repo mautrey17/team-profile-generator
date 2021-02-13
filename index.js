@@ -5,6 +5,7 @@ const Employee = require('./lib/employee');
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
+const funcs = require('./src/write.js')
 
 //list of employees
 const employeeList = [];
@@ -116,7 +117,7 @@ const runMenu = () => {
                 break;
             default:
                 // generateHTML();
-                fs.writeFileSync('/dist/index.html', generateHTML(employeeList), 'utf-8');
+                fs.writeFileSync('./distr/test.html', funcs.renderHTML(employeeList), 'utf-8');
                 console.log('all done!')
                 break;
         }
