@@ -17,7 +17,7 @@ const renderCards = (arr) => {
                     <div class="card-body bg-light">
                         <ul class="list-group">
                             <li class="list-group-item">ID: ${arr[i].getId()}</li>
-                            <li class="list-group-item">Email: ${arr[i].getEmail()}</li>
+                            <li class="list-group-item">Email: <a href="mailto:${arr[i].getEmail()}">${arr[i].getEmail()}</a></li>
                             <li class="list-group-item">Office Number: ${arr[i].getOffice()}</li>
                         </ul>
                     </div>
@@ -34,14 +34,14 @@ const renderCards = (arr) => {
                     <div class="card-body bg-light">
                         <ul class="list-group">
                             <li class="list-group-item">ID: ${arr[i].getId()}</li>
-                            <li class="list-group-item">Email: ${arr[i].getEmail()}</li>
-                            <li class="list-group-item">GitHub: ${arr[i].getGithub()}</li>
+                            <li class="list-group-item">Email: <a href="mailto:${arr[i].getEmail()}">${arr[i].getEmail()}</a></li>
+                            <li class="list-group-item">GitHub: <a href="https://github.com/${arr[i].getGithub()}" target="_blank">${arr[i].getGithub()}</a></li>
                         </ul>
                     </div>
                 </div>
                 </div>`)
                 break;
-            case 'Engineer':
+            case 'Intern':
                 testarr.push(`<div class="col mb-4">
                 <div class="card">
                     <div class="card-header bg-primary text-white">
@@ -51,7 +51,7 @@ const renderCards = (arr) => {
                     <div class="card-body bg-light">
                         <ul class="list-group">
                             <li class="list-group-item">ID: ${arr[i].getId()}</li>
-                            <li class="list-group-item">Email: ${arr[i].getEmail()}</li>
+                            <li class="list-group-item">Email: <a href="mailto:${arr[i].getEmail()}">${arr[i].getEmail()}</a></li>
                             <li class="list-group-item">GitHub: ${arr[i].getSchool()}</li>
                         </ul>
                     </div>
