@@ -4,27 +4,107 @@ const getCardInfo = (arr) => {
 };
 
 const renderCards = (arr) => {
-    
-    
-return arr.forEach(emp => {
-    console.log(emp)
-return `<div class="col mb-4">
-<div class="card">
-    <div class="card-header bg-primary text-white">
-        <h5>${emp.getName()}</h5>
-        <h5>Role Here</h5>
-    </div>
-    <div class="card-body bg-light">
-        <ul class="list-group">
-            <li class="list-group-item">Section 1</li>
-            <li class="list-group-item">Section 2</li>
-            <li class="list-group-item">Section 3</li>
-        </ul>
-    </div>
-</div>
-</div>`
-})}
+    const testarr = [];
+    for(let i=0; i < arr.length; i++){
+        switch(arr[i].getRole()){
+            case 'Manager':
+                testarr.push(`<div class="col mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5>${arr[i].getName()}</h5>
+                        <h5>${arr[i].getRole()}</h5>
+                    </div>
+                    <div class="card-body bg-light">
+                        <ul class="list-group">
+                            <li class="list-group-item">ID: ${arr[i].getId()}</li>
+                            <li class="list-group-item">Email: ${arr[i].getEmail()}</li>
+                            <li class="list-group-item">Office Number: ${arr[i].getOffice()}</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>`)
+                break;
+            case 'Engineer':
+                testarr.push(`<div class="col mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5>${arr[i].getName()}</h5>
+                        <h5>${arr[i].getRole()}</h5>
+                    </div>
+                    <div class="card-body bg-light">
+                        <ul class="list-group">
+                            <li class="list-group-item">ID: ${arr[i].getId()}</li>
+                            <li class="list-group-item">Email: ${arr[i].getEmail()}</li>
+                            <li class="list-group-item">GitHub: ${arr[i].getGithub()}</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>`)
+                break;
+            case 'Engineer':
+                testarr.push(`<div class="col mb-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5>${arr[i].getName()}</h5>
+                        <h5>${arr[i].getRole()}</h5>
+                    </div>
+                    <div class="card-body bg-light">
+                        <ul class="list-group">
+                            <li class="list-group-item">ID: ${arr[i].getId()}</li>
+                            <li class="list-group-item">Email: ${arr[i].getEmail()}</li>
+                            <li class="list-group-item">GitHub: ${arr[i].getSchool()}</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>`)
+                break;
+            default:
+                break;
+        }
 
+
+
+
+
+
+//         testarr.push(`<div class="col mb-4">
+// <div class="card">
+//     <div class="card-header bg-primary text-white">
+//         <h5>${arr[i].getName()}</h5>
+//         <h5>${arr[i].getRole()}</h5>
+//     </div>
+//     <div class="card-body bg-light">
+//         <ul class="list-group">
+//             <li class="list-group-item">${arr[i].getId()}</li>
+//             <li class="list-group-item">${arr[i].getEmail()}</li>
+            
+//         </ul>
+//     </div>
+// </div>
+// </div>`)
+    }
+    return testarr.join('')
+{/* <li class="list-group-item">${arr[i].getOffice()}</li> */}
+
+// arr.forEach(emp => {
+//     console.log(emp)
+// return `<div class="col mb-4">
+// <div class="card">
+//     <div class="card-header bg-primary text-white">
+//         <h5>${emp.getName()}</h5>
+//         <h5>Role Here</h5>
+//     </div>
+//     <div class="card-body bg-light">
+//         <ul class="list-group">
+//             <li class="list-group-item">Section 1</li>
+//             <li class="list-group-item">Section 2</li>
+//             <li class="list-group-item">Section 3</li>
+//         </ul>
+//     </div>
+// </div>
+// </div>`
+// })}
+}
 
 const renderHTML = (arr) => {
     console.log(arr);
