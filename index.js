@@ -1,6 +1,5 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const jest = require('jest');
 const Employee = require('./lib/employee');
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
@@ -94,7 +93,6 @@ const menuQ = {
     ]
 }
 
-
 //function to create another employee
 const runMenu = () => {
     inquirer.prompt(menuQ).then((response) => {
@@ -133,7 +131,5 @@ const createManager = () => {
         runMenu();
     });
 }
-
-
 
 createManager();
