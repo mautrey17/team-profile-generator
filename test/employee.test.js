@@ -21,11 +21,11 @@ test('can get id using getId()', () => {
 test('can get email using getEmail()', () => {
     const e = new Employee('Matt', 2, 'test.mail.com');
 
-    expect(e.getEmail()).toBe('test.mail.com');
+    expect(e.getEmail()).toEqual('test.mail.com');
 });
 
 test('can get role using getRole()', () => {
     const e = new Employee('Matt', 2, 'test.mail.com');
 
-    expect(e.getRole()).toBe('Employee');
+    expect(e.getRole()).toEqual('Employee');
 });
