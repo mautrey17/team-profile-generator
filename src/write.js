@@ -1,8 +1,4 @@
-const getCardInfo = (arr) => {
-    arr.toLowerCase();
-    const newUl = docu
-};
-
+//function to generate employee cards
 const renderCards = (arr) => {
     const testarr = [];
     for(let i=0; i < arr.length; i++){
@@ -61,51 +57,11 @@ const renderCards = (arr) => {
             default:
                 break;
         }
-
-
-
-
-
-
-//         testarr.push(`<div class="col mb-4">
-// <div class="card">
-//     <div class="card-header bg-primary text-white">
-//         <h5>${arr[i].getName()}</h5>
-//         <h5>${arr[i].getRole()}</h5>
-//     </div>
-//     <div class="card-body bg-light">
-//         <ul class="list-group">
-//             <li class="list-group-item">${arr[i].getId()}</li>
-//             <li class="list-group-item">${arr[i].getEmail()}</li>
-            
-//         </ul>
-//     </div>
-// </div>
-// </div>`)
     }
     return testarr.join('')
-{/* <li class="list-group-item">${arr[i].getOffice()}</li> */}
-
-// arr.forEach(emp => {
-//     console.log(emp)
-// return `<div class="col mb-4">
-// <div class="card">
-//     <div class="card-header bg-primary text-white">
-//         <h5>${emp.getName()}</h5>
-//         <h5>Role Here</h5>
-//     </div>
-//     <div class="card-body bg-light">
-//         <ul class="list-group">
-//             <li class="list-group-item">Section 1</li>
-//             <li class="list-group-item">Section 2</li>
-//             <li class="list-group-item">Section 3</li>
-//         </ul>
-//     </div>
-// </div>
-// </div>`
-// })}
 }
 
+//function to generate full document
 const renderHTML = (arr) => {
     console.log(arr);
 return `<!DOCTYPE html>
@@ -128,7 +84,6 @@ return `<!DOCTYPE html>
         <div class="container">
             <div class="row row-cols-1 row-cols-md-3 justify-content-center">
                 
-
                 ${renderCards(arr)}
 
             </div>    
