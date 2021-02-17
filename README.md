@@ -17,7 +17,7 @@ In order to install the application, follow these steps:
 1. In the command line enter "npm install"
 
 ## Usage
-To launch the program, enter "node index". Then answer the questions in the command line. The finalized html file will be in the distr folder.
+To launch the program, enter "node index". Then answer the questions in the command line. The finalized html file will be in the distr folder. Futher instructions and a walk-through can be found with this link: https://drive.google.com/file/d/1aHWoj97hPKnWxEav4hihqVhz5MZjGLEB/view
 
 ## License
 This application is not protected under a license.
