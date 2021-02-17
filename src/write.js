@@ -11,7 +11,7 @@ const renderCards = (arr) => {
                         <h5><i class="fas fa-coffee"></i> ${arr[i].getRole()}</h5>
                     </div>
                     <div class="card-body bg-light">
-                        <ul class="list-group">
+                        <ul class="list-group mt-3 mb-3">
                             <li class="list-group-item">ID: ${arr[i].getId()}</li>
                             <li class="list-group-item">Email: <a href="mailto:${arr[i].getEmail()}">${arr[i].getEmail()}</a></li>
                             <li class="list-group-item">Office Number: ${arr[i].getOffice()}</li>
@@ -28,7 +28,7 @@ const renderCards = (arr) => {
                         <h5><i class="fas fa-glasses"></i> ${arr[i].getRole()}</h5>
                     </div>
                     <div class="card-body bg-light">
-                        <ul class="list-group">
+                        <ul class="list-group mt-3 mb-3">
                             <li class="list-group-item">ID: ${arr[i].getId()}</li>
                             <li class="list-group-item">Email: <a href="mailto:${arr[i].getEmail()}">${arr[i].getEmail()}</a></li>
                             <li class="list-group-item">GitHub: <a href="https://github.com/${arr[i].getGithub()}" target="_blank">${arr[i].getGithub()}</a></li>
@@ -45,7 +45,7 @@ const renderCards = (arr) => {
                         <h5><i class="fas fa-user-graduate"></i> ${arr[i].getRole()}</h5>
                     </div>
                     <div class="card-body bg-light">
-                        <ul class="list-group">
+                        <ul class="list-group mt-3 mb-3">
                             <li class="list-group-item">ID: ${arr[i].getId()}</li>
                             <li class="list-group-item">Email: <a href="mailto:${arr[i].getEmail()}">${arr[i].getEmail()}</a></li>
                             <li class="list-group-item">GitHub: ${arr[i].getSchool()}</li>
@@ -76,10 +76,11 @@ return `<!DOCTYPE html>
         href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous"/>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header >
-            <h1 class="m-5 text-center">My Team</h1>
+        <header class="mb-5">
+            <h1 class="text-center">My Team</h1>
         </header>
         <div class="container">
             <div class="row row-cols-1 row-cols-md-3 justify-content-center">

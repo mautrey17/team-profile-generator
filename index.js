@@ -115,7 +115,7 @@ const runMenu = () => {
                 break;
             default:
                 // generateHTML();
-                fs.writeFileSync('./distr/test.html', funcs.renderHTML(employeeList), 'utf-8');
+                fs.writeFileSync('./distr/index.html', funcs.renderHTML(employeeList), 'utf-8');
                 console.log('all done!')
                 break;
         }
